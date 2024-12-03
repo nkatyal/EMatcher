@@ -1,0 +1,15 @@
+{
+    "dblp-acm-dirty": "../datasets/Dirty/DBLP-ACM/",
+    "dblp-googlescholar-dirty": "../datasets/Dirty/DBLP-GoogleScholar/",
+    "itunes-amazon-dirty": "../datasets/Dirty/iTunes-Amazon/",
+    "walmart-amazon-dirty": "../datasets/Dirty/Walmart-Amazon/",
+    "amazon-google": "../datasets/Structured/Amazon-Google/",
+    "beer": "../datasets/Structured/Beer/",
+    "dblp-acm-structured": "../datasets/Structured/DBLP-ACM/",
+    "dblp-googlescholar-structured": "../datasets/Structured/DBLP-GoogleScholar/",
+    "fodors-zagats": "../datasets/Structured/Fodors-Zagats/",
+    "itunes-amazon-structured": "../datasets/Structured/iTunes-Amazon/",
+    "walmart-amazon-structured": "../datasets/Structured/Walmart-Amazon/",
+    "abt-buy": "../datasets/Textual/Abt-Buy/",
+    "company": "../datasets/Textual/Company/"
+}

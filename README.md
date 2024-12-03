@@ -1,2 +1,2 @@
 # EMatcher
-Entity matching in practice using BERT-based models
+Entity matching using BERT-based models in practice 
