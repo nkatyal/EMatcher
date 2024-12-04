@@ -27,7 +27,8 @@ class EMatcher:
         
         self.crossencoder = M2BertReranker()
         self.tokenizer = AutoTokenizer.from_pretrained('bert-base-uncased')
-        self.crossencoder.load_state_dict(torch.load("/home/nkatyal/EMatcher/train/trained_model/M2BertStateDict.pth"))
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.crossencoder.load_state_dict(torch.load("/home/nkatyal/EMatcher/train/trained_model/M2BertStateDict.pth", map_location=device ))
         self.crossencoder.eval()
         # Collate the columns into a single document
         preprocess_row(self.right_table)

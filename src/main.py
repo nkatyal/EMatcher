@@ -4,6 +4,8 @@ import argparse
 import pandas as pd
 
 from EMModels.EMatcher import EMatcher
+from EMModels.Ditto import Ditto
+
 from EMModels.utils import preprocess_row
 from EMDataset import EMDataset
 
@@ -29,8 +31,11 @@ def main_cli():
     if args.dataset not in metadata.keys():
         raise ValueError(f"dataset can be one of: {metadata.keys()}")
 
-    em = EMatcher(args.dataset, metadata)
-
+    if args.model == 'ditto':
+        em = Ditto(args.dataset, metadata)
+    else:
+        em = EMatcher(args.dataset, metadata)
+    
     left_table = pd.read_csv(metadata[args.dataset] + "tableA.csv")
 
     # All pairs are used only for inference and not training
